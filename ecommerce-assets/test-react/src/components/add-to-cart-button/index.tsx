@@ -7,7 +7,7 @@ type ButtonProps = React.ComponentProps<'button'> & {
   count?: number
 }
 
-export const Button = ({ count, title, ...props }: ButtonProps) => {
+export const AddToCartButton = ({ count, title, ...props }: ButtonProps) => {
   return (
     <Container hasThisProductInCart={!!(count && count > 0)} {...props}>
       <CartIcon src={addShoppingCartImg} alt="Add Shopping Cart" />

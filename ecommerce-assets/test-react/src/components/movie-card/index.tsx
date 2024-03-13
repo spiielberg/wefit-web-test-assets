@@ -2,7 +2,7 @@ import { formatToBRL } from 'brazilian-values'
 
 import { useProductContext } from '../../context/product-context'
 import { Product } from '../../context/types'
-import { Button } from '../add-to-cart-button'
+import { AddToCartButton } from '../add-to-cart-button'
 import { Container, Image, Price, Title } from './style'
 
 interface MovieCardProps {
@@ -21,7 +21,7 @@ export const MovieCard = ({ product }: MovieCardProps) => {
       <Image src={product.image} alt={product.title} />
       <Title>{product.title}</Title>
       <Price>{formatToBRL(product.price)}</Price>
-      <Button
+      <AddToCartButton
         type="button"
         onClick={handleAddToCart}
         title="ADICIONAR AO CARRINHO"
