@@ -29,6 +29,10 @@ import {
   ProductFlexContainer,
   ProductFlexContent,
   FinishButtonContainer,
+  FinishContainer,
+  FinishText,
+  FinishPrice,
+  FinishTextContainer,
 } from './style'
 import { Fragment } from 'react/jsx-runtime'
 import { Divider } from '../../components/divider'
@@ -206,11 +210,22 @@ export const Cart = () => {
             <Divider />
           </div>
 
-          <FinishButtonContainer>
-            <Link to="/purchase-completed">
-              <Button type="button">FINALIZAR PEDIDO</Button>
-            </Link>
-          </FinishButtonContainer>
+          <FinishContainer>
+            <FinishButtonContainer>
+              <Link to="/purchase-completed">
+                <Button type="button">FINALIZAR PEDIDO</Button>
+              </Link>
+            </FinishButtonContainer>
+
+            <FinishTextContainer>
+              <FinishText>TOTAL</FinishText>
+              <FinishPrice>
+                {formatToBRL(
+                  cart.reduce((total, product) => total + product.price, 0),
+                )}
+              </FinishPrice>
+            </FinishTextContainer>
+          </FinishContainer>
         </CartContent>
       ) : (
         <EmptyCartContent>

@@ -138,11 +138,48 @@ export const ProductFlexImage = styled.img`
   height: 82px;
 `
 
+export const FinishContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 540px) {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+`
+
 export const FinishButtonContainer = styled.div`
   width: 173px;
 
   @media (max-width: 540px) {
     width: 100%;
+  }
+`
+
+export const FinishTextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: 540px) {
+    justify-content: space-between;
+  }
+`
+
+export const FinishText = styled.p`
+  font-size: 14px;
+  font-weight: 700;
+  color: #999999;
+`
+
+export const FinishPrice = styled.p`
+  font-size: 24px;
+  font-weight: 700;
+  color: #2f2e41;
+  margin-right: 24px;
+
+  @media (max-width: 540px) {
+    margin-right: 0;
   }
 `
 
